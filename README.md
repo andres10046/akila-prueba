@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Prueba técnica Akila
 
 Solución a los dos ejercicios.
@@ -43,3 +44,5 @@ Se usó ChatGPT/Claude como asistente durante el desarrollo (esqueletos, propues
 - El modo IMAP del Ejercicio 1 no se ejecutó por falta de credenciales.
 - Los CSV se asumen estáticos y locales.
 - Ver el README de cada ejercicio para limitaciones específicas.
+=======
+
