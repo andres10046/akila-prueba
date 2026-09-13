@@ -1,4 +1,3 @@
-
 # Prueba técnica Akila
 
 Solución a los dos ejercicios.
@@ -8,21 +7,16 @@ Solución a los dos ejercicios.
 | 1 | Triaje de correos y volcado a seguimiento | [`ejercicio_1_triaje_correos/`](./ejercicio_1_triaje_correos/) |
 | 2 | Panel de ventas de apartamentos (Streamlit) | [`ejercicio_2_panel_ventas/`](./ejercicio_2_panel_ventas/) |
 
-Cada carpeta tiene su propio README con instrucciones exactas.
+## Cómo ejecutar
 
-## Ejercicio 2 — Panel de ventas (arranque rápido)
+Clonar el repositorio:
 
 ```bash
-cd ejercicio_2_panel_ventas
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run app.py
+git clone https://github.com/andres10046/akila-prueba.git
+cd akila-prueba
 ```
 
-> La primera vez, Streamlit pide un email. Déjalo en blanco y pulsa Enter.
-
-## Ejercicio 1 — Triaje de correos (arranque rápido)
+### Ejercicio 1 — Triaje de correos
 
 ```bash
 cd ejercicio_1_triaje_correos
@@ -32,7 +26,21 @@ pip install -r requirements.txt
 python main.py --input data/correos_clientes.csv
 ```
 
-Genera `output/seguimiento.xlsx`.
+Genera `output/seguimiento.xlsx` con las columnas `Fecha | Cliente | Tipo | Urgencia | Acción | Responsable`.
+
+### Ejercicio 2 — Panel de ventas
+
+```bash
+cd ejercicio_2_panel_ventas
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Abre el tablero en `http://localhost:8501`.
+
+> La primera vez, Streamlit pide un email. Déjalo en blanco y pulsa Enter.
 
 ## Uso de IA
 
@@ -43,5 +51,4 @@ Se usó ChatGPT/Claude como asistente durante el desarrollo (esqueletos, propues
 - Probado en Linux con Python 3.12.
 - El modo IMAP del Ejercicio 1 no se ejecutó por falta de credenciales.
 - Los CSV se asumen estáticos y locales.
-- Ver el README de cada ejercicio para limitaciones específica
-
+- Ver el README de cada ejercicio para limitaciones específicas.
