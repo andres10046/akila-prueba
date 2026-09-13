@@ -91,4 +91,4 @@ with col_b:
 
 # ---------- Detalle ----------
 with st.expander("🔍 Ver datos crudos (filtrados por año)"):
-    st.dataframe(df_v, width="stretch")
+    st.dataframe(df_v, use_container_width=True)

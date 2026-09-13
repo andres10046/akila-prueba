@@ -37,7 +37,7 @@ def render_ventas_tiempo(datos, granularidad: str = "Semanal", anio: str = "Todo
         xaxis_tickformat="%b %Y" if granularidad == "Mensual" else "%d %b %Y"
     )
     fig.update_traces(textposition="outside")
-    st.plotly_chart(fig, width="stretch")
+    st.plotly_chart(fig, use_container_width=True)
 
     with st.expander(f"Ver tabla de ventas por {granularidad.lower()}"):
         st.dataframe(
@@ -46,7 +46,7 @@ def render_ventas_tiempo(datos, granularidad: str = "Semanal", anio: str = "Todo
                 "num_ventas": "Nº ventas",
                 "valor_cop": "Valor (COP)",
             }),
-            width="stretch", hide_index=True,
+            use_container_width=True, hide_index=True,
         )
 
 
@@ -55,10 +55,10 @@ def render_ventas_tipo(t) -> None:
     if t.empty:
         st.info("Sin ventas registradas.")
         return
-    st.dataframe(t, width="stretch", hide_index=True)
+    st.dataframe(t, use_container_width=True, hide_index=True)
     st.plotly_chart(
         px.pie(t, names="tipo_apartamento", values="vendidos", hole=0.4),
-        width="stretch",
+        use_container_width=True,
     )
 
 
@@ -67,8 +67,8 @@ def render_disponibles(d) -> None:
     if d.empty:
         st.info("Sin disponibles.")
         return
-    st.dataframe(d, width="stretch", hide_index=True)
+    st.dataframe(d, use_container_width=True, hide_index=True)
     st.plotly_chart(
         px.bar(d, x="tipo_apartamento", y="disponibles", text="disponibles"),
-        width="stretch",
+        use_container_width=True,
     )
